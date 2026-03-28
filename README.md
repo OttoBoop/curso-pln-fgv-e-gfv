@@ -1,129 +1,110 @@
-# Curso de PLN e Politicas Publicas
+# Curso de PLN e Políticas Públicas
 
-**Laboratorio de Politicas Publicas (FGV-EPGE) em parceria com o Gabinete do Vereador Flavio Valle (GFV)**
+**Voluntários da disciplina Laboratório de Políticas Públicas (FGV-EPGE) em parceria com o Gabinete do Vereador Flávio Valle (GFV)**
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://python.org)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)](https://jupyter.org)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OttoBoop/curso-pln-fgv-e-gfv/blob/main/aula-01-classificacao/Classificacao_Noticias_IBRE_Educacional.ipynb)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
 ## Sobre o Projeto
 
-Este repositorio reune o material didatico de um curso pratico de **Processamento de Linguagem Natural (PLN)** aplicado a **politicas publicas**. O curso e organizado pelo **Laboratorio de Politicas Publicas da FGV-EPGE** em parceria com o **Gabinete do Vereador Flavio Valle (GFV)**.
+Este repositório reúne o material didático de um curso prático de **Processamento de Linguagem Natural (PLN)** aplicado a **políticas públicas**.
 
-### O que voce vai encontrar aqui
+O curso é voltado para **voluntários da disciplina Laboratório de Políticas Públicas** (FGV-EPGE) que trabalham em um projeto em parceria com o **Gabinete do Vereador Flávio Valle**. O objetivo do projeto é analisar a percepção de políticas públicas através da análise de notícias com PLN.
 
-Material de aulas que ensinam, passo a passo, como usar modelos de linguagem (LLMs) para analisar noticias — desde a classificacao automatica ate a coleta em massa. Todo o conteudo foi pensado para ser acessivel: mesmo que voce nao tenha participado das aulas presenciais, os notebooks sao autocontidos e explicam cada etapa em detalhe.
+O material também está disponível para **qualquer pessoa interessada** em aprender a classificar textos com LLMs. Os notebooks são autocontidos e explicam cada etapa em detalhe — funcionam sem ter assistido às aulas, embora não as substituam.
 
-### Visao do curso
+**Pré-requisito:** conhecimento intermediário de Python.
 
-O objetivo final e que os participantes consigam, de forma autonoma:
+### Visão do curso
 
-1. **Classificar noticias com LLMs** — construir prompts eficazes, chamar APIs (OpenAI, Google Gemini) e avaliar a qualidade dos resultados
-2. **Coletar noticias em massa** — usar ferramentas de clipping para baixar noticias de diversos jornais sobre temas especificos
-3. **Analisar politicas publicas via PLN** — aplicar as tecnicas aprendidas para avaliar como a imprensa cobre temas de politicas publicas
+Ao longo do **1º semestre letivo de 2026**, os voluntários aprendem a:
+
+1. **Classificar textos com LLMs** — construir prompts, chamar APIs (OpenAI, Google Gemini) e avaliar a qualidade dos resultados
+2. **Coletar notícias em massa** — usar ferramentas de clipping para baixar notícias de diversos jornais sobre temas específicos
+3. **Analisar políticas públicas via PLN** — gerar e analisar suas próprias bases de dados sobre políticas públicas específicas
+
+O repositório está em desenvolvimento ativo. A Aula 01 já está disponível. Novos materiais estão sendo construídos, incluindo a ferramenta de clipping para coleta de notícias e aplicações a análise de políticas públicas.
 
 ---
 
 ## Aulas
 
-### Aula 01 — Classificacao de Noticias Economicas com LLMs
+### Aula 01 — Classificação de Notícias Econômicas com LLMs
 
 > [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OttoBoop/curso-pln-fgv-e-gfv/blob/main/aula-01-classificacao/Classificacao_Noticias_IBRE_Educacional.ipynb)
 
-Nesta aula, construimos um **pipeline completo de classificacao automatica de noticias** usando LLMs. A partir de um dataset de 50 noticias economicas brasileiras, o modelo classifica cada artigo em 4 dimensoes:
+Nesta aula, construímos um **pipeline completo de classificação automática de notícias** usando LLMs. A partir de um dataset de 50 notícias econômicas brasileiras, o modelo classifica cada artigo em 4 dimensões:
 
-| Dimensao | Pergunta | Valores |
+| Dimensão | Pergunta | Valores |
 |----------|----------|---------|
-| **Incerteza** | A noticia transmite incerteza economica? | Sim / Nao |
-| **Polaridade** | Qual o tom economico da noticia? | Negativo / Neutro / Positivo |
-| **Internacional** | Trata de evento internacional? | Sim / Nao |
-| **Afeta o Brasil** | Se internacional, afeta a economia brasileira? | Sim / Nao / N/A |
+| **Incerteza** | A notícia transmite incerteza econômica? | Sim / Não |
+| **Polaridade** | Qual o tom econômico da notícia? | Negativo / Neutro / Positivo |
+| **Internacional** | Trata de evento internacional? | Sim / Não |
+| **Afeta o Brasil** | Se internacional, afeta a economia brasileira? | Sim / Não / N/A |
 
 **O que a aula cobre:**
 
-- **Engenharia de prompts** — como projetar instrucoes claras para o modelo classificar corretamente
+- **Engenharia de prompts** — como projetar instruções claras para o modelo classificar corretamente
 - **3 abordagens de API:**
   - GPT-3.5-Turbo via Chat Completions (testada e funcional)
   - OpenAI Responses API com Structured Outputs (framework WIP)
   - Google Gemini com Structured Outputs (framework WIP)
-- **Extracao de dados** — regex para texto livre vs. JSON estruturado (Pydantic, JSON Schema)
-- **Avaliacao de qualidade** — acuracia, precisao ponderada, matriz de confusao
-- **Secao "Agora e Sua Vez"** — espaco para voce modificar o prompt e comparar resultados
-- **3 desafios abertos** — para quem quer ir alem
+- **Extração de dados** — regex para texto livre vs. JSON estruturado (Pydantic, JSON Schema)
+- **Avaliação de qualidade** — acurácia, precisão ponderada, matriz de confusão
+- **Seção "Agora é Sua Vez"** — espaço para você modificar o prompt e comparar resultados
+- **3 desafios abertos** — para quem quer ir além
 
-**Sobre o dataset:** Adaptado de pesquisa do IBRE/FGV (Instituto Brasileiro de Economia), quando Otavio Bopp era estagiario. Contem 50 noticias economicas brasileiras ja classificadas por humanos, servindo como gabarito para avaliar os modelos.
-
-### Em breve
-
-Aulas futuras cobrirao a ferramenta de clipping para coleta de noticias em massa e aplicacoes especificas a analise de politicas publicas.
+**Sobre o dataset:** adaptado de pesquisa do IBRE/FGV (Instituto Brasileiro de Economia), quando Otávio Bopp era estagiário. Contém 50 notícias econômicas brasileiras já classificadas por humanos, servindo como gabarito para avaliar os modelos.
 
 ---
 
 ## Como Usar
 
-### Opcao 1: Google Colab (recomendada)
+### Google Colab
 
-A forma mais simples — nao precisa instalar nada no seu computador:
+Abra o notebook diretamente no navegador clicando no badge **"Open in Colab"** acima da aula desejada. O dataset é baixado automaticamente.
 
-1. Clique no badge **"Open in Colab"** acima da aula desejada
-2. O notebook abre direto no seu navegador
-3. Siga as instrucoes dentro do notebook (ele explica como configurar as chaves de API)
-
-### Opcao 2: Execucao local
+### Execução local
 
 ```bash
-# 1. Clone o repositorio
+# 1. Clone o repositório
 git clone https://github.com/OttoBoop/curso-pln-fgv-e-gfv.git
 cd curso-pln-fgv-e-gfv
 
-# 2. Instale as dependencias
-pip install openai google-genai pandas scikit-learn openpyxl python-dotenv
-
-# 3. Abra o notebook
-jupyter notebook aula-01-classificacao/Classificacao_Noticias_IBRE_Educacional.ipynb
+# 2. Abra a pasta da aula desejada e execute o notebook
+cd aula-01-classificacao
+jupyter notebook
 ```
 
-### Pre-requisitos
+Cada notebook indica e instala as dependências necessárias na primeira célula.
+
+### Pré-requisitos
 
 - **Python 3.8+**
-- **Chave de API da OpenAI** (obrigatoria para a Aula 01)
-- **Chave de API do Google Gemini** (opcional — usada no modulo 3)
+- **Chave de API da OpenAI** (obrigatória para a Aula 01)
+- **Chave de API do Google Gemini** (opcional — usada no módulo 3)
 
 O notebook explica em detalhe como obter e configurar cada chave.
 
 ---
 
-## O que Voce Vai Aprender (Aula 01)
+## O que Você Vai Aprender (Aula 01)
 
-Ao concluir o notebook, voce sera capaz de:
+Ao concluir o notebook, você será capaz de:
 
-- **Projetar prompts eficazes** para tarefas de classificacao de texto com LLMs
+- **Projetar prompts eficazes** para tarefas de classificação de texto com LLMs
 - **Chamar APIs de LLMs** (OpenAI e Google Gemini) via Python
 - **Usar Structured Outputs** (Pydantic + JSON Schema) para obter respostas em formato padronizado
-- **Avaliar modelos de classificacao** com metricas quantitativas (acuracia, precisao, matriz de confusao)
+- **Avaliar modelos de classificação** com métricas quantitativas (acurácia, precisão, matriz de confusão)
 - **Comparar provedores** de LLM e entender os trade-offs entre eles
-- **Iterar e melhorar prompts** com base na analise de erros
+- **Iterar e melhorar prompts** com base na análise de erros
 
 ---
 
-## Tecnologias
-
-| Pacote | Para que serve |
-|--------|---------------|
-| `openai` | Cliente oficial da API da OpenAI |
-| `google-genai` | Cliente oficial da API do Google Gemini |
-| `pandas` | Manipulacao e analise de dados tabulares |
-| `scikit-learn` | Metricas de avaliacao (acuracia, precisao, matriz de confusao) |
-| `openpyxl` | Leitura de arquivos Excel (.xlsx) |
-| `python-dotenv` | Carregamento seguro de chaves de API |
-| `pydantic` | Definicao de schemas para Structured Outputs |
-
----
-
-## Estrutura do Repositorio
+## Estrutura do Repositório
 
 ```
 curso-pln-fgv-e-gfv/
@@ -131,20 +112,14 @@ curso-pln-fgv-e-gfv/
 ├── .gitignore                         # Arquivos ignorados pelo Git
 └── aula-01-classificacao/             # Material da Aula 01
     ├── Classificacao_Noticias_IBRE_Educacional.ipynb   # Notebook principal
-    └── Historias Para classificação.xlsx               # Dataset de 50 noticias
+    └── Historias Para classificação.xlsx               # Dataset de 50 notícias
 ```
 
 ---
 
-## Creditos
+## Créditos
 
-- **Laboratorio de Politicas Publicas** — FGV-EPGE (Escola de Economia da FGV Rio)
-- **Gabinete do Vereador Flavio Valle** — Camara Municipal do Rio de Janeiro
-- **Otavio Bopp** — autor e instrutor do curso
+- **Laboratório de Políticas Públicas** — FGV-EPGE (Escola de Economia da FGV Rio)
+- **Gabinete do Vereador Flávio Valle** — Câmara Municipal do Rio de Janeiro
+- **Otávio Bopp** — autor e instrutor do curso
 - **Dataset original** — adaptado de pesquisa do IBRE/FGV (Instituto Brasileiro de Economia)
-
----
-
-## Licenca
-
-Este projeto e distribuido sob a licenca MIT. Veja [LICENSE](LICENSE) para mais detalhes.
