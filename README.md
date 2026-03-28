@@ -22,11 +22,46 @@ O material também está disponível para **qualquer pessoa interessada** em apr
 
 Ao longo do **1º semestre letivo de 2026**, os voluntários aprendem a:
 
-1. **Classificar textos com LLMs** — construir prompts, chamar APIs (OpenAI, Google Gemini) e avaliar a qualidade dos resultados
+1. **Classificar textos com LLMs** — construir prompts, chamar APIs de modelos de linguagem e avaliar a qualidade dos resultados
 2. **Coletar notícias em massa** — usar ferramentas de clipping para baixar notícias de diversos jornais sobre temas específicos
 3. **Analisar políticas públicas via PLN** — gerar e analisar suas próprias bases de dados sobre políticas públicas específicas
 
 O repositório está em desenvolvimento ativo. A Aula 01 já está disponível. Novos materiais estão sendo construídos, incluindo a ferramenta de clipping para coleta de notícias e aplicações a análise de políticas públicas.
+
+---
+
+## Como Usar
+
+### Google Colab
+
+Abra o notebook diretamente no navegador clicando no badge **"Open in Colab"** acima da aula desejada. O dataset é baixado automaticamente.
+
+### Execução local
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/OttoBoop/curso-pln-fgv-e-gfv.git
+cd curso-pln-fgv-e-gfv
+
+# 2. Abra a pasta da aula desejada e execute o notebook
+cd aula-01-classificacao
+jupyter notebook
+```
+
+Cada notebook indica e instala as dependências necessárias na primeira célula.
+
+---
+
+## Estrutura do Repositório
+
+```
+curso-pln-fgv-e-gfv/
+├── README.md                          # Este arquivo
+├── .gitignore                         # Arquivos ignorados pelo Git
+└── aula-01-classificacao/             # Material da Aula 01
+    ├── Classificacao_Noticias_IBRE_Educacional.ipynb   # Notebook principal
+    └── Historias Para classificação.xlsx               # Dataset de 50 notícias
+```
 
 ---
 
@@ -57,63 +92,20 @@ Nesta aula, construímos um **pipeline completo de classificação automática d
 - **Seção "Agora é Sua Vez"** — espaço para você modificar o prompt e comparar resultados
 - **3 desafios abertos** — para quem quer ir além
 
+**Chaves de API:** A chave da OpenAI foi disponibilizada para os voluntários do curso. Para o público externo, é necessário criar sua própria chave (paga). A chave do Google Gemini é gratuita — o notebook explica como obtê-la.
+
 **Sobre o dataset:** adaptado de pesquisa do IBRE/FGV (Instituto Brasileiro de Economia), quando Otávio Bopp era estagiário. Contém 50 notícias econômicas brasileiras já classificadas por humanos, servindo como gabarito para avaliar os modelos.
 
----
-
-## Como Usar
-
-### Google Colab
-
-Abra o notebook diretamente no navegador clicando no badge **"Open in Colab"** acima da aula desejada. O dataset é baixado automaticamente.
-
-### Execução local
-
-```bash
-# 1. Clone o repositório
-git clone https://github.com/OttoBoop/curso-pln-fgv-e-gfv.git
-cd curso-pln-fgv-e-gfv
-
-# 2. Abra a pasta da aula desejada e execute o notebook
-cd aula-01-classificacao
-jupyter notebook
-```
-
-Cada notebook indica e instala as dependências necessárias na primeira célula.
-
-### Pré-requisitos
-
-- **Python 3.8+**
-- **Chave de API da OpenAI** (obrigatória para a Aula 01)
-- **Chave de API do Google Gemini** (opcional — usada no módulo 3)
-
-O notebook explica em detalhe como obter e configurar cada chave.
-
----
-
-## O que Você Vai Aprender (Aula 01)
+#### O que você vai aprender
 
 Ao concluir o notebook, você será capaz de:
 
 - **Projetar prompts eficazes** para tarefas de classificação de texto com LLMs
-- **Chamar APIs de LLMs** (OpenAI e Google Gemini) via Python
+- **Chamar APIs de LLMs** via Python
 - **Usar Structured Outputs** (Pydantic + JSON Schema) para obter respostas em formato padronizado
 - **Avaliar modelos de classificação** com métricas quantitativas (acurácia, precisão, matriz de confusão)
 - **Comparar provedores** de LLM e entender os trade-offs entre eles
 - **Iterar e melhorar prompts** com base na análise de erros
-
----
-
-## Estrutura do Repositório
-
-```
-curso-pln-fgv-e-gfv/
-├── README.md                          # Este arquivo
-├── .gitignore                         # Arquivos ignorados pelo Git
-└── aula-01-classificacao/             # Material da Aula 01
-    ├── Classificacao_Noticias_IBRE_Educacional.ipynb   # Notebook principal
-    └── Historias Para classificação.xlsx               # Dataset de 50 notícias
-```
 
 ---
 
@@ -122,4 +114,4 @@ curso-pln-fgv-e-gfv/
 - **Laboratório de Políticas Públicas** — FGV-EPGE (Escola de Economia da FGV Rio)
 - **Gabinete do Vereador Flávio Valle** — Câmara Municipal do Rio de Janeiro
 - **Otávio Bopp** — autor e instrutor do curso
-- **Dataset original** — adaptado de pesquisa do IBRE/FGV (Instituto Brasileiro de Economia)
+- **Dataset da Aula 01** — adaptado de pesquisa do IBRE/FGV (Instituto Brasileiro de Economia)
